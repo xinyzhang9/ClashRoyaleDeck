@@ -1,11 +1,28 @@
+import data from 'json!../cards.json';
+var cards = []
+Object.keys(data).forEach(function(key, idx) {
+   cards.push(data[key]);
+}); 
+
+var newCards = [];
+for(let i in cards){
+  let index = parseInt(i)+1;
+  newCards[i] = {
+                  id: index,
+                  text: cards[i].name,
+                  img_src :'http://clashroyaledeckbuilder.com/assets/cards/'+index+'.png',
+                  completed: false,
+                  cost: cards[i].cost,
+                  type: cards[i].type,
+                  rarity: cards[i].rarity
+
+                }
+}
+
+
+
 const todo = (state, action) => {
   switch (action.type) {
-    case 'ADD_TODO':
-      return {
-        id: action.id,
-        text: action.text,
-        completed: false
-      }
     case 'TOGGLE_TODO':
       if (state.id !== action.id) {
         return state
@@ -19,13 +36,8 @@ const todo = (state, action) => {
   }
 }
 
-const todos = (state = [], action) => {
+const todos = (state = newCards, action) => {
   switch (action.type) {
-    case 'ADD_TODO':
-      return [
-        ...state,
-        todo(undefined, action)
-      ]
     case 'TOGGLE_TODO':
       return state.map(t =>
         todo(t, action)

@@ -10,6 +10,20 @@ const getVisibleTodos = (todos, filter) => {
       return todos.filter(t => t.completed)
     case 'SHOW_ACTIVE':
       return todos.filter(t => !t.completed)
+    case 'SHOW_COMMON':
+      return todos.filter(t => t.rarity === 'common')
+    case 'SHOW_RARE':
+      return todos.filter(t => t.rarity === 'rare')
+    case 'SHOW_EPIC':
+      return todos.filter(t => t.rarity === 'epic')
+    case 'SHOW_LEGENDARY':
+      return todos.filter(t => t.rarity === 'legendary')
+    case 'SHOW_TROOP':
+      return todos.filter(t => t.type === 'troop')
+    case 'SHOW_SPELL':
+      return todos.filter(t => t.type === 'spell')
+    case 'SHOW_BUILDING':
+      return todos.filter(t => t.type === 'building')
   }
 }
 

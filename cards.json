@@ -1291,7 +1291,7 @@
     },
     "63": {
         "name":"Graveyard",
-        "rarity":"epic",
+        "rarity":"legendary",
         "cost":5,
         "products":"32",
         "damage":550,
