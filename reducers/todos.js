@@ -14,8 +14,18 @@ for(let i in cards){
                   completed: false,
                   cost: cards[i].cost,
                   type: cards[i].type,
-                  rarity: cards[i].rarity
-
+                  rarity: cards[i].rarity,
+                  number: cards[i].number || 1,
+                  core: cards[i].core || 0,
+                  attackRating: cards[i].attackRating || 0,
+                  defendRating: cards[i].defendRating || 0,
+                  canHitBuilding: cards[i].canHitBuilding || 0,
+                  canHitTroop: cards[i].canHitTroop || 0,
+                  canHitAir: cards[i].canHitAir || 0,
+                  canHitArea: cards[i].canHitArea || 0,
+                  canTank: cards[i].canTank || 0,
+                  dps: cards[i].dps || 0,
+                  dpc: cards[i].dpc || 0
                 }
 }
 
