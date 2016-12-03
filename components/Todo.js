@@ -4,7 +4,7 @@ const Todo = ({ onClick, completed, text, img_src }) => (
   <li
     onClick={onClick}
     style={{
-      opacity: completed ? 0.5 : 1,
+      opacity: completed ? 0.65 : 1,
       display: 'inline',
     }}
   >
@@ -16,9 +16,9 @@ const Todo = ({ onClick, completed, text, img_src }) => (
      <img src={img_src} style = {{
       width: '120px',
       display: 'block',
-      border: '1px solid orange',
       borderRadius: '5px',
-      padding: '2px'
+      padding: '2px',
+      border: completed? "3px solid brown" : '1px solid orange'
      }}/>
      {text}
     </p>

@@ -559,11 +559,11 @@
         "canHitArea":0,
         "canTank":0,
         "spellResistance":5,
-        "core":1,
+        "core":0,
         "like":[],
         "dislike":[],
         "attackRating":6,
-        "defendRating":5
+        "defendRating":3
     },
     "28": {
         "name":"Freeze",
@@ -672,7 +672,7 @@
         "like":[],
         "dislike":[],
         "attackRating":8,
-        "defendRating":1
+        "defendRating":2
     },
     "34": {
         "name":"Barbarians",
@@ -733,9 +733,9 @@
         "range":1,
         "canHitBuilding":1,
         "canHitTroop":0,
-        "canHitAir":1,
-        "canHitArea":1,
-        "canTank":0,
+        "canHitAir":0,
+        "canHitArea":0,
+        "canTank":1,
         "spellResistance":6,
         "dpc":33,
         "core":1,
@@ -900,7 +900,7 @@
         "canTank":1,
         "spellResistance":4,
         "dpc":45,
-        "core":1,
+        "core":0,
         "like":[],
         "dislike":[],
         "attackRating":6,
@@ -945,7 +945,7 @@
         "canHitArea":0,
         "canTank":1,
         "spellResistance":5,
-        "dpc":16,
+        "dpc":62,
         "core":1,
         "like":[],
         "dislike":[],
@@ -972,7 +972,7 @@
         "core":0,
         "like":[],
         "dislike":[],
-        "attackRating":7,
+        "attackRating":6,
         "defendRating":7
     },
     "48": {
@@ -1019,7 +1019,7 @@
         "core":0,
         "like":[],
         "dislike":[],
-        "attackRating":4,
+        "attackRating":3,
         "defendRating":6
     },
     "50": {
@@ -1042,7 +1042,7 @@
         "core":0,
         "like":[],
         "dislike":[],
-        "attackRating":6,
+        "attackRating":4,
         "defendRating":6
     },
     "51": {
@@ -1064,7 +1064,7 @@
         "core":0,
         "like":[],
         "dislike":[],
-        "attackRating":7,
+        "attackRating":6,
         "defendRating":7
     },
     "52": {
@@ -1110,7 +1110,7 @@
         "core":1,
         "like":[],
         "dislike":[],
-        "attackRating":9,
+        "attackRating":8,
         "defendRating":2
     },
     "54": {
@@ -1135,7 +1135,7 @@
         "core":1,
         "like":[],
         "dislike":[],
-        "attackRating":7,
+        "attackRating":8,
         "defendRating":4
     },
     "55": {

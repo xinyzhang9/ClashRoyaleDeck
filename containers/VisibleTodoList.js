@@ -8,8 +8,8 @@ const getVisibleTodos = (todos, filter) => {
       return todos
     case 'SHOW_COMPLETED':
       return todos.filter(t => t.completed)
-    case 'SHOW_ACTIVE':
-      return todos.filter(t => !t.completed)
+    case 'SHOW_CORE':
+      return todos.filter(t => t.core === 1)
     case 'SHOW_COMMON':
       return todos.filter(t => t.rarity === 'common')
     case 'SHOW_RARE':

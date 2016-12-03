@@ -57,22 +57,23 @@ let getCore = (todos) => {
 let getAttackRating = (todos) => {
   let sum = 0;
   todos.forEach(function(o){
-    sum += o.attackRating * o.number;
+    sum += o.attackRating * o.cost;
   })
-
-  let res = (sum).toFixed(1);
-  return res;
+  console.log('att rating',sum);
+  let rating = (sum > 250)?'S':(sum > 220)?'A':(sum>200)?'B':(sum>150)?'C':(sum>100)?'D':(sum>75)?'E':'F';
+  return rating;
 }
 
 //defend rating
 let getDefendRating = (todos) => {
   let sum = 0;
   todos.forEach(function(o){
-    sum += o.defendRating * o.number;
+    sum += o.defendRating * o.cost;
   })
 
-  let res = (sum).toFixed(1);
-  return res;
+  console.log('def rating',sum);
+  let rating = (sum > 250)?'S':(sum > 220)?'A':(sum>200)?'B':(sum>150)?'C':(sum>100)?'D':(sum>75)?'E':'F';
+  return rating;
 }
 
 //hit building capability
@@ -81,7 +82,8 @@ let getHitBuilding = (todos) => {
   todos.forEach(function(o){
     sum += o.dpc * o.canHitBuilding;
   })
-  return sum;
+  let rating = (sum > 600)?'S':(sum > 550)?'A':(sum>80)?'B':(sum>70)?'C':(sum>60)?'D':(sum>50)?'E':'F';
+  return rating;
 }
 
 //hit troop capability
@@ -90,7 +92,8 @@ let getHitTroop = (todos) => {
   todos.forEach(function(o){
     sum += o.dpc * o.canHitTroop;
   })
-  return sum;
+  let rating = (sum > 600)?'S':(sum > 550)?'A':(sum>80)?'B':(sum>70)?'C':(sum>60)?'D':(sum>50)?'E':'F';
+  return rating;
 }
 
 //hit air capability
@@ -99,7 +102,8 @@ let getHitAir = (todos) => {
   todos.forEach(function(o){
     sum += o.dpc * o.canHitAir;
   })
-  return sum;
+  let rating = (sum > 400)?'S':(sum > 350)?'A':(sum>300)?'B':(sum>250)?'C':(sum>200)?'D':(sum>100)?'E':'F';
+  return rating;
 }
 
 //hit area capability
@@ -108,7 +112,8 @@ let getHitArea = (todos) => {
   todos.forEach(function(o){
     sum += o.dpc * o.canHitArea;
   })
-  return sum;
+  let rating = (sum > 400)?'S':(sum > 350)?'A':(sum>300)?'B':(sum>250)?'C':(sum>200)?'D':(sum>100)?'E':'F';
+  return rating;
 }
 
 //no. of tanks
@@ -120,6 +125,17 @@ let getTank = (todos) => {
   return sum;
 }
 
+let getCostSuggestion = (todos) => {
+  if(getCost(todos) >= 3.8 && todos.filter(t => t.id === 23).length === 0){
+    return 'The Elixir Cost is too high. You should consider an Elixir Collector.';
+  }else if(getCost(todos) <= 3 && getCore(todos) === 0){
+    return 'The Elixir Cost is very low. However, you should choose at least a core to lead your troop.';
+  }else if(getCost(todos) >= 4.7){
+    return 'The Elixir Cost is too high even with an Elixir Collector.';
+  }else{
+    return 'The Elixir Cost is applicable. Good job.';
+  }
+}
 
 
 
@@ -141,21 +157,22 @@ const TodoList = ({ todos, onTodoClick }) => {
   <div style = {{textAlign: 'center'}}>
     {todos.filter(t => t.completed).length === 8 ? (
     <div id="success">
-      <p><span style = {{color:'hotpink'}}>Average Elixir Cost: </span>{getCost(deck)}</p>
+      <h5>[ Statistics ] </h5>
+      <p><span style = {{color:'hotpink'}}>Average Elixir Cost(圣水速率): </span>{getCost(deck)}</p>
 
-      <p><span style = {{color:'red'}}>Attack rating: </span>{getAttackRating(deck)}</p>
-      <p><span style = {{color:'green'}}>Defend rating: </span>{getDefendRating(deck)}</p>
+      <p><span style = {{color:'red'}}>Attack rating(进攻评分): </span>{getAttackRating(deck)}</p>
+      <p><span style = {{color:'green'}}>Defend rating(防守评分): </span>{getDefendRating(deck)}</p>
 
       <p>
-        <span style = {{color:'gray'}}>Common: </span>{getCommon(deck)}  
-        <span style = {{color:'orange'}}> Rare: </span>{getRare(deck)}  
-        <span style = {{color:'purple'}}> Epic: </span>{getEpic(deck)}  
-        <span style = {{color:'skyblue'}}> Legendary: </span>{getLegendary(deck)}
+        <span style = {{color:'gray'}}>Common(普通卡牌): </span>{getCommon(deck)}  
+        <span style = {{color:'orange'}}> Rare(稀有卡牌): </span>{getRare(deck)}  
+        <span style = {{color:'purple'}}> Epic(史诗卡牌): </span>{getEpic(deck)}  
+        <span style = {{color:'skyblue'}}> Legendary(传奇卡牌): </span>{getLegendary(deck)}
       </p>
       <p>
-        <span style = {{color:'maroon'}}>Troop: </span>{getTroops(deck)}  
-        <span style = {{color:'hotpink'}}> Spell: </span>{getSpells(deck)}  
-        <span style = {{color:'green'}}> Building: </span>{getBuildings(deck)}  
+        <span style = {{color:'maroon'}}>Troop(部队数目): </span>{getTroops(deck)}  
+        <span style = {{color:'hotpink'}}> Spell(法术数目): </span>{getSpells(deck)}  
+        <span style = {{color:'green'}}> Building(建筑数目): </span>{getBuildings(deck)}  
       </p>
 
       <p>
@@ -169,10 +186,15 @@ const TodoList = ({ todos, onTodoClick }) => {
       <span style = {{color:'blue'}}> Hit Air(防空能力): </span>{getHitAir(deck)}
       <span style = {{color:'blue'}}> Hit Area(群伤能力): </span>{getHitArea(deck)}
       </p>
+      <hr/>
+      <h5>[ Suggestions ] </h5>
+      <p>
+      {getCostSuggestion(deck)}
+      </p>
     </div>
   ) : 
     <div id="fail">
-      Your deck must include exactly <code>8</code> cards. You can see your deck in <span style = {{color:'steelblue'}}>Completed</span> tab
+      Your deck must include exact <code>8</code> cards. You can see your deck in <span style = {{color:'steelblue'}}>Completed</span> tab
     </div>
   } 
   </div>

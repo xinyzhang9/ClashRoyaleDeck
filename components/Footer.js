@@ -39,8 +39,8 @@ const Footer = () => (
     </FilterLink>
     {" | "}
 
-    <FilterLink filter="SHOW_ACTIVE">
-      <span style = {{color: 'red'}}>Active</span>
+    <FilterLink filter="SHOW_CORE">
+      <span style = {{color: 'red'}}>Core</span>
     </FilterLink>
     {" | "}
     <FilterLink filter="SHOW_COMPLETED">
