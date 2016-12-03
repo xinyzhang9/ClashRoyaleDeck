@@ -81,6 +81,8 @@
         "canHitArea":1,
         "like":[],
         "dislike":[],
+        "dpc":81,
+        "dpcTower":33,
         "attackRating":4,
         "defendRating":5
     },
@@ -137,6 +139,8 @@
         "damage":572,
         "damageTower":229,
         "type":"spell",
+        "dpc":143,
+        "dpcTower":58,
         "canHitBuilding":1,
         "canHitTroop":1,
         "canHitAir":1,
@@ -358,6 +362,8 @@
         "damage":864,
         "damageTower":346,
         "type":"spell",
+        "dpc":144,
+        "dpcTower":58,
         "canHitBuilding":1,
         "canHitTroop":1,
         "canHitAir":1,
@@ -376,6 +382,8 @@
         "products":"5",
         "spellResistance":1,
         "type":"spell",
+        "dpc":106,
+        "dpcTower":106,
         "canHitBuilding":1,
         "canHitTroop":1,
         "canHitAir":0,
@@ -455,9 +463,11 @@
         "name":"Rocket",
         "rarity":"rare",
         "cost":6,
-        "damage":864,
-        "damageTower":346,
+        "damage":1232,
+        "damageTower":493,
         "type":"spell",
+        "dpc":206,
+        "dpcTower":83,
         "canHitBuilding":1,
         "canHitTroop":1,
         "canHitAir":1,
@@ -559,13 +569,17 @@
         "name":"Freeze",
         "rarity":"epic",
         "cost":4,
-        "type":"spell"
+        "type":"spell",
+        "attackRating":7,
+        "defendRating":7
     },
     "29": {
         "name":"Rage",
         "rarity":"epic",
         "cost":2,
-        "type":"spell"
+        "type":"spell",
+        "attackRating":7,
+        "defendRating":1
     },
     "30": {
         "name":"Giant Skeleton",
@@ -719,15 +733,15 @@
         "range":1,
         "canHitBuilding":1,
         "canHitTroop":0,
-        "canHitAir":0,
-        "canHitArea":0,
+        "canHitAir":1,
+        "canHitArea":1,
         "canTank":0,
         "spellResistance":6,
         "dpc":33,
         "core":1,
         "like":[],
         "dislike":[],
-        "attackRating":8,
+        "attackRating":9,
         "defendRating":2
     },
     "37": {
@@ -807,7 +821,7 @@
         "like":[],
         "dislike":[],
         "attackRating":1,
-        "defendRating":6
+        "defendRating":7
     },
     "41": {
         "name":"Tesla",
@@ -853,9 +867,11 @@
         "name":"Poison",
         "rarity":"epic",
         "cost":4,
-        "damage":550,
-        "damageTower":220,
+        "damage":610,
+        "damageTower":250,
         "type":"spell",
+        "dpc":153,
+        "dpcTower":63,
         "canHitBuilding":1,
         "canHitTroop":1,
         "canHitAir":1,
@@ -887,8 +903,8 @@
         "core":1,
         "like":[],
         "dislike":[],
-        "attackRating":7,
-        "defendRating":3
+        "attackRating":6,
+        "defendRating":4
     },
     "45": {
         "name":"Ice Wizard",
@@ -933,7 +949,7 @@
         "core":1,
         "like":[],
         "dislike":[],
-        "attackRating":8,
+        "attackRating":9,
         "defendRating":2
     },
     "47": {
@@ -1026,7 +1042,7 @@
         "core":0,
         "like":[],
         "dislike":[],
-        "attackRating":7,
+        "attackRating":6,
         "defendRating":6
     },
     "51": {
@@ -1037,6 +1053,8 @@
         "hitpoints":1056,
         "products":"50",
         "type":"building",
+        "dpc":85,
+        "dpcTower":42,
         "canHitBuilding":1,
         "canHitTroop":1,
         "canHitAir":1,
@@ -1092,7 +1110,7 @@
         "core":1,
         "like":[],
         "dislike":[],
-        "attackRating":8,
+        "attackRating":9,
         "defendRating":2
     },
     "54": {
@@ -1113,6 +1131,7 @@
         "canTank":1,
         "spellResistance":4,
         "dpc":54,
+        "dpcTower":22,
         "core":1,
         "like":[],
         "dislike":[],
@@ -1195,6 +1214,8 @@
         "damage":260,
         "damageTower":104,
         "type":"spell",
+        "dpc":130,
+        "dpcTower":52,
         "canHitBuilding":1,
         "canHitTroop":1,
         "canHitAir":0,
@@ -1263,9 +1284,9 @@
         "range":1,
         "canHitBuilding":1,
         "canHitTroop":0,
-        "canHitAir":0,
-        "canHitArea":0,
-        "canTank":0,
+        "canHitAir":1,
+        "canHitArea":1,
+        "canTank":1,
         "spellResistance":4,
         "dpc":13,
         "core":0,
@@ -1301,6 +1322,8 @@
         "number":20,
         "radius":5,
         "type":"spell",
+        "dpc":110,
+        "dpcTower":110,
         "canHitBuilding":1,
         "canHitTroop":1,
         "canHitAir":0,

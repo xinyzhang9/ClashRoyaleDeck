@@ -16,6 +16,35 @@ let getCost = (todos) => {
   return res;
 }
 
+let getTroops = (todos) => {
+  return todos.filter(t=>t.type === 'troop').length;
+}
+
+let getSpells = (todos) => {
+  return todos.filter(t=>t.type === 'spell').length;
+}
+
+let getBuildings = (todos) => {
+  return todos.filter(t=>t.type === 'building').length;
+}
+
+let getCommon = (todos) => {
+  return todos.filter(t=>t.rarity === 'common').length;
+}
+
+let getRare = (todos) => {
+  return todos.filter(t=>t.rarity === 'rare').length;
+}
+
+let getEpic = (todos) => {
+  return todos.filter(t=>t.rarity === 'epic').length;
+}
+
+let getLegendary = (todos) => {
+  return todos.filter(t=>t.rarity === 'legendary').length;
+}
+
+//no. of attacking cores
 let getCore = (todos) => {
   let sum = 0;
   todos.forEach(function(o){
@@ -24,30 +53,29 @@ let getCore = (todos) => {
   return sum;
 }
 
+// attack rating
 let getAttackRating = (todos) => {
   let sum = 0;
-  let sumOfCost = 0;
   todos.forEach(function(o){
     sum += o.attackRating * o.number;
-    sumOfCost += o.cost;
   })
 
-  let res = (sum/sumOfCost).toFixed(1);
+  let res = (sum).toFixed(1);
   return res;
 }
 
+//defend rating
 let getDefendRating = (todos) => {
   let sum = 0;
-  let sumOfCost = 0;
   todos.forEach(function(o){
     sum += o.defendRating * o.number;
-    sumOfCost += o.cost;
   })
 
-  let res = (sum/sumOfCost).toFixed(1);
+  let res = (sum).toFixed(1);
   return res;
 }
 
+//hit building capability
 let getHitBuilding = (todos) => {
   let sum = 0;
   todos.forEach(function(o){
@@ -56,6 +84,7 @@ let getHitBuilding = (todos) => {
   return sum;
 }
 
+//hit troop capability
 let getHitTroop = (todos) => {
   let sum = 0;
   todos.forEach(function(o){
@@ -64,6 +93,7 @@ let getHitTroop = (todos) => {
   return sum;
 }
 
+//hit air capability
 let getHitAir = (todos) => {
   let sum = 0;
   todos.forEach(function(o){
@@ -72,6 +102,7 @@ let getHitAir = (todos) => {
   return sum;
 }
 
+//hit area capability
 let getHitArea = (todos) => {
   let sum = 0;
   todos.forEach(function(o){
@@ -80,6 +111,7 @@ let getHitArea = (todos) => {
   return sum;
 }
 
+//no. of tanks
 let getTank = (todos) => {
   let sum = 0;
   todos.forEach(function(o){
@@ -109,7 +141,18 @@ const TodoList = ({ todos, onTodoClick }) => {
     {todos.filter(t => t.completed).length === 8 ? (
     <div id="success">
       <p><span style = {{color:'hotpink'}}>Average Elixir cost: </span>{getCost(deck)}</p>
+
+      <p><span style = {{color:'hotpink'}}>Common cards: </span>{getCommon(deck)}</p>
+      <p><span style = {{color:'hotpink'}}>Rare cards: </span>{getRare(deck)}</p>
+      <p><span style = {{color:'hotpink'}}>Epic cards: </span>{getEpic(deck)}</p>
+      <p><span style = {{color:'hotpink'}}>Legendary cards: </span>{getLegendary(deck)}</p>
+
+      <p><span style = {{color:'hotpink'}}>Attack rating: </span>{getAttackRating(deck)}</p>
+      <p><span style = {{color:'hotpink'}}>Defend rating: </span>{getDefendRating(deck)}</p>
+
       <p><span style = {{color:'hotpink'}}>No.of cores: </span>{getCore(deck)}</p>
+      <p><span style = {{color:'hotpink'}}>No.of tanks: </span>{getTank(deck)}</p>
+
       <p><span style = {{color:'hotpink'}}>Hit Building: </span>{getHitBuilding(deck)}</p>
       <p><span style = {{color:'hotpink'}}>Hit Troop: </span>{getHitTroop(deck)}</p>
       <p><span style = {{color:'hotpink'}}>Hit Air: </span>{getHitAir(deck)}</p>
