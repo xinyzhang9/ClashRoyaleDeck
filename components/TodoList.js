@@ -125,6 +125,7 @@ let getTank = (todos) => {
 
 
 const TodoList = ({ todos, onTodoClick }) => {
+  
   let deck = todos.filter(t => t.completed);
   return(
   <div>
@@ -140,27 +141,38 @@ const TodoList = ({ todos, onTodoClick }) => {
   <div style = {{textAlign: 'center'}}>
     {todos.filter(t => t.completed).length === 8 ? (
     <div id="success">
-      <p><span style = {{color:'hotpink'}}>Average Elixir cost: </span>{getCost(deck)}</p>
+      <p><span style = {{color:'hotpink'}}>Average Elixir Cost: </span>{getCost(deck)}</p>
 
-      <p><span style = {{color:'hotpink'}}>Common cards: </span>{getCommon(deck)}</p>
-      <p><span style = {{color:'hotpink'}}>Rare cards: </span>{getRare(deck)}</p>
-      <p><span style = {{color:'hotpink'}}>Epic cards: </span>{getEpic(deck)}</p>
-      <p><span style = {{color:'hotpink'}}>Legendary cards: </span>{getLegendary(deck)}</p>
+      <p><span style = {{color:'red'}}>Attack rating: </span>{getAttackRating(deck)}</p>
+      <p><span style = {{color:'green'}}>Defend rating: </span>{getDefendRating(deck)}</p>
 
-      <p><span style = {{color:'hotpink'}}>Attack rating: </span>{getAttackRating(deck)}</p>
-      <p><span style = {{color:'hotpink'}}>Defend rating: </span>{getDefendRating(deck)}</p>
+      <p>
+        <span style = {{color:'gray'}}>Common: </span>{getCommon(deck)}  
+        <span style = {{color:'orange'}}> Rare: </span>{getRare(deck)}  
+        <span style = {{color:'purple'}}> Epic: </span>{getEpic(deck)}  
+        <span style = {{color:'skyblue'}}> Legendary: </span>{getLegendary(deck)}
+      </p>
+      <p>
+        <span style = {{color:'maroon'}}>Troop: </span>{getTroops(deck)}  
+        <span style = {{color:'hotpink'}}> Spell: </span>{getSpells(deck)}  
+        <span style = {{color:'green'}}> Building: </span>{getBuildings(deck)}  
+      </p>
 
-      <p><span style = {{color:'hotpink'}}>No.of cores: </span>{getCore(deck)}</p>
-      <p><span style = {{color:'hotpink'}}>No.of tanks: </span>{getTank(deck)}</p>
+      <p>
+      <span style = {{color:'steelblue'}}>No.of cores(核心数目): </span>{getCore(deck)}
+      <span style = {{color:'brown'}}> No.of tanks(坦克数目): </span>{getTank(deck)}
+      </p>
 
-      <p><span style = {{color:'hotpink'}}>Hit Building: </span>{getHitBuilding(deck)}</p>
-      <p><span style = {{color:'hotpink'}}>Hit Troop: </span>{getHitTroop(deck)}</p>
-      <p><span style = {{color:'hotpink'}}>Hit Air: </span>{getHitAir(deck)}</p>
-      <p><span style = {{color:'hotpink'}}>Hit Area: </span>{getHitArea(deck)}</p>
+      <p>
+      <span style = {{color:'blue'}}>Hit Building(夺塔能力): </span>{getHitBuilding(deck)}
+      <span style = {{color:'blue'}}> Hit Troop(削兵能力): </span>{getHitTroop(deck)}
+      <span style = {{color:'blue'}}> Hit Air(防空能力): </span>{getHitAir(deck)}
+      <span style = {{color:'blue'}}> Hit Area(群伤能力): </span>{getHitArea(deck)}
+      </p>
     </div>
   ) : 
     <div id="fail">
-      Your deck must include exactly 8 cards. {deck.length}/8
+      Your deck must include exactly <code>8</code> cards. You can see your deck in <span style = {{color:'steelblue'}}>Completed</span> tab
     </div>
   } 
   </div>
