@@ -144,7 +144,7 @@ const TodoList = ({ todos, onTodoClick }) => {
   
   let deck = todos.filter(t => t.completed);
   return(
-  <div>
+  <div style = {{textAlign:'center'}}>
   <ul>
     {todos.map(todo =>
       <Todo
