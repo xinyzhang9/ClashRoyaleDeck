@@ -27,6 +27,9 @@ module.exports = {
           plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
 
         }
+      },
+      {
+        test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192',
       }
     ]
   }

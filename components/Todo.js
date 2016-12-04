@@ -13,7 +13,7 @@ const Todo = ({ onClick, completed, text, img_src }) => (
                   padding: '5px',
                   textAlign: 'center'
                }}>
-     <img src={img_src} style = {{
+     <img src={require('../img/'+img_src+'.png')} style = {{
       width: '120px',
       display: 'block',
       borderRadius: '5px',
