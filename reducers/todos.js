@@ -27,7 +27,8 @@ for(let i in cards){
                   dps: cards[i].dps || 0,
                   dpc: cards[i].dpc || 0,
                   dpcTower: cards[i].dpcTower || (cards[i].dpc || 0),
-                  dislike: cards[i].dislike || []
+                  dislike: cards[i].dislike || [],
+                  like: cards[i].like || []
                 }
 }
 

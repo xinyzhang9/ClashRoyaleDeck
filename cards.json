@@ -17,7 +17,7 @@
         "spellResistance":3,
         "dpc":53,
         "core":0,
-        "like":[],
+        "like":[9,48,35],
         "dislike":[60,15,24,31,34,35,59],
         "attackRating":3,
         "defendRating":5
@@ -40,7 +40,7 @@
         "spellResistance":2,
         "dpc":58,
         "core":0,
-        "like":[],
+        "like":[8,36,46],
         "dislike":[7,49,56],
         "attackRating":4,
         "defendRating":5
@@ -63,7 +63,7 @@
         "spellResistance":1,
         "dpc":50,
         "core":0,
-        "like":[],
+        "like":[33],
         "dislike":[4,13,16,7,26,47,56,58],
         "attackRating":3,
         "defendRating":3
@@ -104,7 +104,7 @@
         "spellResistance":1,
         "dpc":64,
         "core":0,
-        "like":[],
+        "like":[33],
         "dislike":[4,13,16,7,26,15,39,45,47,50,55,58],
         "attackRating":4,
         "defendRating":4
@@ -127,7 +127,7 @@
         "spellResistance":2,
         "dpc":45,
         "core":0,
-        "like":[],
+        "like":[8,46],
         "dislike":[7,9,17,31,35,57,59],
         "attackRating":4,
         "defendRating":5
@@ -168,7 +168,7 @@
         "spellResistance":5,
         "dpc":28,
         "core":1,
-        "like":[],
+        "like":[9,56,59],
         "dislike":[12,15,24,31,34,60],
         "attackRating":7,
         "defendRating":3
@@ -191,7 +191,7 @@
         "spellResistance":2,
         "dpc":40,
         "core":0,
-        "like":[],
+        "like":[8,38],
         "dislike":[7,17,22,15,31,34,49,57],
         "attackRating":6,
         "defendRating":6
@@ -215,7 +215,7 @@
         "spellResistance":4,
         "dpc":44,
         "core":1,
-        "like":[],
+        "like":[44,8],
         "dislike":[21,15,24,31,35,49,59],
         "attackRating":7,
         "defendRating":3
@@ -258,7 +258,7 @@
         "spellResistance":4,
         "dpc":80,
         "core":0,
-        "like":[],
+        "like":[8,36,53],
         "dislike":[21,15,31,34,35,48,49,56,59],
         "attackRating":6,
         "defendRating":7
@@ -281,7 +281,7 @@
         "spellResistance":4,
         "dpc":35,
         "core":0,
-        "like":[],
+        "like":[33],
         "dislike":[24,31,35,59],
         "attackRating":4,
         "defendRating":6
@@ -304,7 +304,7 @@
         "spellResistance":3,
         "dpc":18,
         "core":0,
-        "like":[],
+        "like":[8],
         "dislike":[17,22,48,56],
         "attackRating":4,
         "defendRating":5
@@ -327,7 +327,7 @@
         "spellResistance":1,
         "dpc":67,
         "core":0,
-        "like":[],
+        "like":[54],
         "dislike":[4,13,7,26,39,43,47,56,58],
         "attackRating":2,
         "defendRating":8
@@ -350,7 +350,7 @@
         "spellResistance":4,
         "dpc":21,
         "core":0,
-        "like":[],
+        "like":[36,53,60],
         "dislike":[9,24,48],
         "attackRating":5,
         "defendRating":4
@@ -388,7 +388,7 @@
         "canHitTroop":1,
         "canHitAir":0,
         "canHitArea":0,
-        "like":[],
+        "like":[54],
         "dislike":[4,7,39,56,58],
         "attackRating":7,
         "defendRating":4
@@ -411,7 +411,7 @@
         "spellResistance":4,
         "dpc":54,
         "core":1,
-        "like":[],
+        "like":[8,16],
         "dislike":[9,24,31,35,45,48,59,60],
         "attackRating":7,
         "defendRating":1
@@ -434,7 +434,7 @@
         "spellResistance":4,
         "dpc":15,
         "core":1,
-        "like":[],
+        "like":[24,40],
         "dislike":[22,24,15,31,59,60],
         "attackRating":8,
         "defendRating":6
@@ -454,7 +454,7 @@
         "canTank":0,
         "spellResistance":2,
         "core":0,
-        "like":[],
+        "like":[36,53],
         "dislike":[7,17],
         "attackRating":1,
         "defendRating":6
@@ -540,7 +540,7 @@
         "spellResistance":3,
         "dpc":27,
         "core":0,
-        "like":[],
+        "like":[8,36,38],
         "dislike":[17,12,57],
         "attackRating":6,
         "defendRating":6
@@ -623,7 +623,7 @@
         "spellResistance":1,
         "dpc":101,
         "core":0,
-        "like":[],
+        "like":[33,53,54],
         "dislike":[4,7,39,43,45,48,51,47],
         "attackRating":8,
         "defendRating":7
@@ -669,7 +669,7 @@
         "spellResistance":4,
         "dpc":44,
         "core":1,
-        "like":[],
+        "like":[35,55,50,3,5,58],
         "dislike":[12,21,15,24,34,31,49,51,56,64],
         "attackRating":8,
         "defendRating":2
@@ -715,7 +715,7 @@
         "spellResistance":1,
         "dpc":84,
         "core":0,
-        "like":[],
+        "like":[33,53,46],
         "dislike":[4,16,7,26,45,47,48,50,55,51],
         "attackRating":7,
         "defendRating":6
@@ -739,7 +739,7 @@
         "spellResistance":6,
         "dpc":33,
         "core":1,
-        "like":[],
+        "like":[2,16,59],
         "dislike":[60,15,24,31,48,59],
         "attackRating":9,
         "defendRating":2
@@ -782,7 +782,7 @@
         "spellResistance":5,
         "dpc":47,
         "core":1,
-        "like":[],
+        "like":[26,35,48,44,10],
         "dislike":[21,60,15,24,31,34,49],
         "attackRating":8,
         "defendRating":4
@@ -901,7 +901,7 @@
         "spellResistance":4,
         "dpc":45,
         "core":0,
-        "like":[],
+        "like":[10,38],
         "dislike":[21,31,35,59],
         "attackRating":6,
         "defendRating":4
@@ -947,7 +947,7 @@
         "spellResistance":5,
         "dpc":62,
         "core":1,
-        "like":[],
+        "like":[35,59],
         "dislike":[60,64,15,24,31,12],
         "attackRating":9,
         "defendRating":2
@@ -970,7 +970,7 @@
         "spellResistance":2,
         "dpc":16,
         "core":0,
-        "like":[],
+        "like":[49],
         "dislike":[4,7,58],
         "attackRating":6,
         "defendRating":7
@@ -993,7 +993,7 @@
         "spellResistance":3,
         "dpc":54,
         "core":1,
-        "like":[],
+        "like":[8,36,38,54],
         "dislike":[7,17,22,15,49,56],
         "attackRating":9,
         "defendRating":8
@@ -1040,7 +1040,7 @@
         "spellResistance":1,
         "dpc":85,
         "core":0,
-        "like":[],
+        "like":[33,10,57],
         "dislike":[21,39,58],
         "attackRating":4,
         "defendRating":6
@@ -1085,7 +1085,7 @@
         "spellResistance":4,
         "dpc":44,
         "core":1,
-        "like":[],
+        "like":[8,34],
         "dislike":[15,34,39,31,35,49,59],
         "attackRating":8,
         "defendRating":5
@@ -1108,7 +1108,7 @@
         "spellResistance":5,
         "dpc":5,
         "core":1,
-        "like":[],
+        "like":[16,60,31,35,54,59,17],
         "dislike":[60,24,31,59],
         "attackRating":8,
         "defendRating":2
@@ -1133,7 +1133,7 @@
         "dpc":54,
         "dpcTower":22,
         "core":1,
-        "like":[],
+        "like":[31,35,9,48,63],
         "dislike":[12,64,15,31,34,35,49,57,59],
         "attackRating":8,
         "defendRating":4
@@ -1156,7 +1156,7 @@
         "spellResistance":2,
         "dpc":53,
         "core":0,
-        "like":[],
+        "like":[33],
         "dislike":[58],
         "attackRating":5,
         "defendRating":7
@@ -1179,7 +1179,7 @@
         "spellResistance":4,
         "dpc":22,
         "core":1,
-        "like":[],
+        "like":[8],
         "dislike":[60,24,31,35,59],
         "attackRating":6,
         "defendRating":7
@@ -1202,7 +1202,7 @@
         "spellResistance":4,
         "dpc":72,
         "core":0,
-        "like":[],
+        "like":[8],
         "dislike":[21,49,31,35,59],
         "attackRating":7,
         "defendRating":7
@@ -1244,7 +1244,7 @@
         "spellResistance":3,
         "dpc":73,
         "core":0,
-        "like":[],
+        "like":[8,36,46,53],
         "dislike":[17,9,48],
         "attackRating":7,
         "defendRating":7
@@ -1267,7 +1267,7 @@
         "spellResistance":4,
         "dpc":40,
         "core":0,
-        "like":[],
+        "like":[16,53],
         "dislike":[17,9,31,48],
         "attackRating":5,
         "defendRating":7
@@ -1290,7 +1290,7 @@
         "spellResistance":4,
         "dpc":13,
         "core":0,
-        "like":[],
+        "like":[39],
         "dislike":[48],
         "attackRating":2,
         "defendRating":7
@@ -1329,7 +1329,7 @@
         "canHitAir":0,
         "canHitArea":1,
         "core":0,
-        "like":[],
+        "like":[8,36,53,54],
         "dislike":[15,43,61],
         "attackRating":8,
         "defendRating":6

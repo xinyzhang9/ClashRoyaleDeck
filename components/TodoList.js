@@ -31,7 +31,9 @@ for(let i in cards){
                   canTank: cards[i].canTank || 0,
                   dps: cards[i].dps || 0,
                   dpc: cards[i].dpc || 0,
-                  dpcTower: cards[i].dpcTower || (cards[i].dpc || 0)
+                  dpcTower: cards[i].dpcTower || (cards[i].dpc || 0),
+                  dislike: cards[i].dislike || [],
+                  like: cards[i].like || []
                 }
 }
 
@@ -93,7 +95,7 @@ let getAttackRating = (todos) => {
   todos.forEach(function(o){
     sum += o.attackRating * o.cost;
   })
-  console.log('att rating',sum);
+  // console.log('att rating',sum);
   let rating = (sum > 250)?'S':(sum > 220)?'A':(sum>200)?'B':(sum>150)?'C':(sum>100)?'D':(sum>75)?'E':'F';
   return rating;
 }
@@ -105,7 +107,7 @@ let getDefendRating = (todos) => {
     sum += o.defendRating * o.cost;
   })
 
-  console.log('def rating',sum);
+  // console.log('def rating',sum);
   let rating = (sum > 250)?'S':(sum > 220)?'A':(sum>200)?'B':(sum>150)?'C':(sum>100)?'D':(sum>75)?'E':'F';
   return rating;
 }
@@ -159,6 +161,7 @@ let getTank = (todos) => {
   return sum;
 }
 
+//get suggestion about the elixir cost
 let getCostSuggestion = (todos) => {
   if(getCost(todos) >= 3.8 && todos.filter(t => t.id === 23).length === 0){
     return 'The Elixir Cost is too high. You should consider an Elixir Collector.';
@@ -171,6 +174,76 @@ let getCostSuggestion = (todos) => {
   }
 }
 
+//get suggestion about strategy based on core
+let getStrategySuggestion = (todos) => {
+  let numCores = getCore(todos);
+  let suggestions = [];
+  if(numCores < 1){
+    return ['An attacking core is strongly suggested to be included in your deck.'];
+  }else if(numCores > 2){
+    return ['You have included more than 2 cores, which is not suggested.'];
+  }else{
+    todos.filter(t => t.core === 1).forEach(function(c){
+      switch(c.id){
+        case 8:
+          suggestions.push("Giant combined with ranged troops can form a strong ground push.");
+          break;
+        case 10:
+          suggestions.push("Prince combined with area-damaged troops or spells can form surprise attack.");
+          break;
+        case 19:
+          suggestions.push("Baloon combined with Giant can form a classical ground-air push.");
+          break;
+        case 20:
+          suggestions.push("X-Bow combined with defending troops or buildings can eliminate enemy tower without entering opponent territory.");
+          break;
+        case 30:
+          suggestions.push("Giant Skeleton's best value is its death damage. So try to get close to the opponent's tower.");
+          break;
+        case 33:
+          suggestions.push("Hog Rider combined with quick small troops can form a quick attack or surprise attack.");
+          break;
+        case 36:
+          suggestions.push("Golem is so robust and slow. It buys time for you to add support units behind it.");
+          break;
+        case 38:
+          suggestions.push("P.E.E.K.A is strong and powerful. But it is easily disattracted by small troops. Try to make ways for it.");
+          break;
+        case 42:
+          suggestions.push("Mortar fires area damage to opponent's troop or tower in very long rage. Your task is to protect it as long as possible.");
+          break;
+        case 46:
+          suggestions.push("Royal Giant targets buildings in long range so it protects your support troops from opponents' attack. But you still need to eliminate opponents' backups quickly.");
+          break;
+        case 48:
+          suggestions.push("Three Musketeers are extremy fatal but also vulnerable to fireballs and lightning. Separate them into two ways can avoid heavy loss and form a strong push.");
+          break;
+        case 52:
+          suggestions.push("Sparky fires fatal area damage but its fire speed is extremy low. Try to protect it from small troops and guide it near opponent's tower.");
+          break;
+        case 53:
+          suggestions.push("Lava Hound is the core of air-troops. Add proper air support units behind it and eliminate opponent's backups.");
+          break;
+        case 54:
+          suggestions.push("Miner is a very versatile core. You can use it to assassinate Princess, destroy Elixir Collector, or be a tank for your attacking units.");
+          break;
+        case 56:
+          suggestions.push("Bowler behind a Giant can form a strong ground push. It is also a very strong defending unit.");
+          break;
+        case 64:
+          suggestions.push("Elite Barbarians are quick and strong, shifting from defensive to offensive. Support them if you have enough elixirs.");
+          break;
+        default:
+          suggestions.push("No suggestions available.");
+      }
+    })
+    
+
+  }
+  return suggestions;
+}
+
+//get most hated cards
 let getDislikeCards = (todos) => {
   let map = new Map();
   todos.forEach(function(o){
@@ -185,8 +258,33 @@ let getDislikeCards = (todos) => {
   
   let sortable = Array.from(map.entries());
   sortable.sort(function(a,b){return b[1]-a[1];});
-  return sortable.map(function(x){return x[0]}).slice(0,4);
+  return sortable.map(function(x){return x[0]}).slice(0,3);
 
+}
+
+//get suggested combination cards
+let getLikeCards = (todos) => {
+  let map = new Map();
+    todos.forEach(function(o){
+      o.like.forEach(function(x){
+        if(!map.has(x)){
+          map.set(x,1);
+        }else{
+          map.set(x,map.get(x)+1);
+        }
+      })
+    })
+
+    //remove cards which are already included in deck
+    todos.forEach(function(o){
+      if(map.has(o.id)){
+        map.delete(o.id);
+      }
+    })
+  
+  let sortable = Array.from(map.entries());
+  sortable.sort(function(a,b){return b[1]-a[1];});
+  return sortable.map(function(x){return x[0]}).slice(0,3);
 }
 
 
@@ -243,11 +341,18 @@ const TodoList = ({ todos, onTodoClick }) => {
       <span style = {{color:'blue'}}> Hit Area(群伤能力): </span>{getHitArea(deck)}
       </p>
       <hr/>
-      <h5>[ Elixir Suggestions ] </h5>
+      <h5 style = {{color: 'hotpink'}}>[ Elixir Suggestions ] </h5>
       <p>
       {getCostSuggestion(deck)}
       </p>
-      <h5>[ Most hated cards ] </h5>
+      <h5 style = {{color: 'orange'}}>[ Strategy Suggestions ] </h5>
+      {
+        getStrategySuggestion(deck).map(t => 
+          <p key={t}>{t}</p>
+        )
+      }
+
+      <h5 style = {{color: 'red'}}>[ Most hated cards ] </h5>
       <ul>
       {
         getDislikeCards(deck).map(t => 
@@ -259,10 +364,10 @@ const TodoList = ({ todos, onTodoClick }) => {
         )
       }
       </ul>
-      <h5>[ Better to have ]</h5>
+      <h5 style = {{color: 'green'}}>[ Suggested combination with ]</h5>
       <ul>
       {
-        testArr.map(t => 
+        getLikeCards(deck).map(t => 
          <PureCard
           key={t}
           text = {newCards[t-1].text}
