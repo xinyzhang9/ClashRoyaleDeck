@@ -1,5 +1,39 @@
 import React, { PropTypes } from 'react'
 import Todo from './Todo'
+import PureCard from './PureCard'
+
+import data from 'json!../cards.json';
+  let cards = []
+Object.keys(data).forEach(function(key, idx) {
+   cards.push(data[key]);
+}); 
+
+let newCards = [];
+for(let i in cards){
+  let index = parseInt(i)+1;
+  newCards[i] = {
+                  id: index,
+                  text: cards[i].name,
+                  // img_src :'http://clashroyaledeckbuilder.com/assets/cards/'+index+'.png',
+                  img_src : index.toString(),
+                  completed: false,
+                  cost: cards[i].cost,
+                  type: cards[i].type,
+                  rarity: cards[i].rarity,
+                  number: cards[i].number || 1,
+                  core: cards[i].core || 0,
+                  attackRating: cards[i].attackRating || 0,
+                  defendRating: cards[i].defendRating || 0,
+                  canHitBuilding: cards[i].canHitBuilding || 0,
+                  canHitTroop: cards[i].canHitTroop || 0,
+                  canHitAir: cards[i].canHitAir || 0,
+                  canHitArea: cards[i].canHitArea || 0,
+                  canTank: cards[i].canTank || 0,
+                  dps: cards[i].dps || 0,
+                  dpc: cards[i].dpc || 0,
+                  dpcTower: cards[i].dpcTower || (cards[i].dpc || 0)
+                }
+}
 
 //utility functions to get statistics
 let getLength = (todos) => {
@@ -141,8 +175,12 @@ let getCostSuggestion = (todos) => {
 
 
 const TodoList = ({ todos, onTodoClick }) => {
+
+
   
   let deck = todos.filter(t => t.completed);
+  // to fetch from todos
+  let testArr = [1,2,3];
   return(
   <div style = {{textAlign:'center'}}>
   <ul>
@@ -187,11 +225,36 @@ const TodoList = ({ todos, onTodoClick }) => {
       <span style = {{color:'blue'}}> Hit Area(群伤能力): </span>{getHitArea(deck)}
       </p>
       <hr/>
-      <h5>[ Suggestions ] </h5>
+      <h5>[ Elixir Suggestions ] </h5>
       <p>
       {getCostSuggestion(deck)}
       </p>
+      <h5>[ Most hated cards ] </h5>
+      <ul>
+      {
+        testArr.map(t => 
+         <PureCard
+          key={t}
+          text = {newCards[t].text}
+          img_src = {t.toString()}
+        />
+        )
+      }
+      </ul>
+      <h5>[ Better to have ]</h5>
+      <ul>
+      {
+        testArr.map(t => 
+         <PureCard
+          key={t}
+          text = {newCards[t].text}
+          img_src = {t.toString()}
+        />
+        )
+      }
+      </ul>
     </div>
+
   ) : 
     <div id="fail">
       Your deck must include exact <code>8</code> cards. You can see your deck in <span style = {{color:'steelblue'}}>Completed</span> tab
