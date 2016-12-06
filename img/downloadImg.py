@@ -1,7 +1,15 @@
+import json
 import urllib
 
+res = []
 
-for i in range(1,65):
-	url = 'http://clashroyaledeckbuilder.com/assets/cards/'+str(i)+'.png'
-	imgName = str(i)+'.png'
-	urllib.urlretrieve(url,imgName)
+def format_name(name):
+	arr = name.lower().split(' ')
+	return "_".join(arr)
+
+with open('../cards.json', 'r') as f:
+    cards = json.load(f)
+    for i in xrange(1,65):
+    	url = 'https://cdn-en.clashroyalepedia.com/cards/'+format_name(cards[str(i)]['name'])+'.png'
+    	imgName = str(i)+'.png'
+    	urllib.urlretrieve(url,imgName)

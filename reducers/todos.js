@@ -10,7 +10,6 @@ for(let i in cards){
   newCards[i] = {
                   id: index,
                   text: cards[i].name,
-                  // img_src :'http://clashroyaledeckbuilder.com/assets/cards/'+index+'.png',
                   img_src : index.toString(),
                   completed: false,
                   cost: cards[i].cost,
