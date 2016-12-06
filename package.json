@@ -4,6 +4,7 @@
   "description": "Redux Todos example",
   "scripts": {
     "start": "node server.js",
+    "build": "./node_modules/.bin/webpack --config webpack.prod.config.js",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/setup.js",
     "test:watch": "npm test -- --watch"
   },

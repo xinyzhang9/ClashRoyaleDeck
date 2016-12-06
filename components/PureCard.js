@@ -8,15 +8,12 @@ const PureCard = ({ text, img_src }) => (
   >
     <p style = {{
                   display: 'inline-block',
-                  padding: '5px',
+                  padding: '1px',
                   textAlign: 'center'
                }}>
      <img src={require('../img/'+img_src+'.png')} style = {{
       width: '120px',
-      display: 'block',
-      borderRadius: '5px',
-      padding: '2px',
-      border: '1px solid orange'
+      display: 'block'
      }}/>
      {text}
     </p>
