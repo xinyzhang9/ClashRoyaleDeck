@@ -171,6 +171,24 @@ let getCostSuggestion = (todos) => {
   }
 }
 
+let getDislikeCards = (todos) => {
+  let map = new Map();
+  todos.forEach(function(o){
+    o.dislike.forEach(function(x){
+      if(!map.has(x)){
+        map.set(x,1);
+      }else{
+        map.set(x,map.get(x)+1);
+      }
+    })
+  })
+  
+  let sortable = Array.from(map.entries());
+  sortable.sort(function(a,b){return b[1]-a[1];});
+  return sortable.map(function(x){return x[0]}).slice(0,4);
+
+}
+
 
 
 
@@ -232,10 +250,10 @@ const TodoList = ({ todos, onTodoClick }) => {
       <h5>[ Most hated cards ] </h5>
       <ul>
       {
-        testArr.map(t => 
+        getDislikeCards(deck).map(t => 
          <PureCard
           key={t}
-          text = {newCards[t].text}
+          text = {newCards[t-1].text}
           img_src = {t.toString()}
         />
         )
@@ -247,7 +265,7 @@ const TodoList = ({ todos, onTodoClick }) => {
         testArr.map(t => 
          <PureCard
           key={t}
-          text = {newCards[t].text}
+          text = {newCards[t-1].text}
           img_src = {t.toString()}
         />
         )

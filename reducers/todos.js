@@ -27,7 +27,8 @@ for(let i in cards){
                   canTank: cards[i].canTank || 0,
                   dps: cards[i].dps || 0,
                   dpc: cards[i].dpc || 0,
-                  dpcTower: cards[i].dpcTower || (cards[i].dpc || 0)
+                  dpcTower: cards[i].dpcTower || (cards[i].dpc || 0),
+                  dislike: cards[i].dislike || []
                 }
 }
 
