@@ -7,9 +7,9 @@ module.exports = {
     './index'
   ],
   output: {
-    path: '/production/',
+    path: path.join(__dirname, '/'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: path.join(__dirname, '/')
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
