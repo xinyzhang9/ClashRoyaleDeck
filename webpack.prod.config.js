@@ -7,9 +7,9 @@ module.exports = {
     './index'
   ],
   output: {
-    path: './production',
+    path: 'production/',
     filename: 'bundle.js',
-    publicPath: './production'
+    publicPath: '/assets'
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
@@ -28,7 +28,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192',
+        test: /\.(png|jpg)$/, loader: 'url-loader?name=/img/[name].[ext]',
       }
     ]
   }
