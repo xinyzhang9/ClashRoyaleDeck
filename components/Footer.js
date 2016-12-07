@@ -21,8 +21,6 @@ const {
   PinterestShareCount 
 } = ShareCounts;
 
-const FacebookIcon = generateShareIcon('facebook');
-
 const Footer = () => (
 	<div style = {{textAlign: 'center'}}>
 		<hr />

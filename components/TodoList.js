@@ -352,7 +352,7 @@ const TodoList = ({ todos, onTodoClick }) => {
         )
       }
 
-      <h5 style = {{color: 'red'}}>[ Most hated cards ] </h5>
+      <h5 style = {{color: 'red'}}>[ Most Hated Cards ] </h5>
       <ul>
       {
         getDislikeCards(deck).map(t => 
@@ -364,7 +364,7 @@ const TodoList = ({ todos, onTodoClick }) => {
         )
       }
       </ul>
-      <h5 style = {{color: 'green'}}>[ Suggested combination with ]</h5>
+      <h5 style = {{color: 'green'}}>[ Suggested Combination With ]</h5>
       <ul>
       {
         getLikeCards(deck).map(t => 
