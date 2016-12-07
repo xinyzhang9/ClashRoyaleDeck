@@ -18,6 +18,16 @@ React + Redux + Webpack
 ## Live
 https://xinyzhang9.github.io/ClashRoyaleDeck/
 
+## Run locally  
+```
+1. Clone or Download this repo  
+2. Switch to this repo in your terminal  
+3. Type the command "npm install"  
+4. Type the command "sudo npm run build"  
+5. Open your index.html file in this repo
+
+```
+
 ## Screenshot
 ![alt tag](https://raw.githubusercontent.com/xinyzhang9/ClashRoyaleDeck/master/screen.png)
 
