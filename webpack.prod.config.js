@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: '/production/',
     filename: 'bundle.js',
-    publicPath: 'https://github.com/xinyzhang9/ClashRoyaleDeck/'
+    publicPath: '/'
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
