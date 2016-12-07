@@ -10,10 +10,10 @@ React + Redux + Webpack
 - [x] Provides differnet filters to classify cards.  
 - [x] Shows statistics and suggestions only when user has selected exact 8 cards.(Game rule)
 - [x] Calculates ratings of the deck in multiple dimensions, including offensive score and defensive score.   
-- [x] Give suggestions based on the core card of the user's deck.  
+- [x] Gives suggestions based on the core card of the user's deck.  
 - [x] Suggests the most dangerous cards the opponent will use to counter the user's deck.
 - [x] Suggests the possible attack combinations based on user's chosen cards.
-- [x] Bundle all node-modules and server-side code into a single js file and deployed directly on Github page.
+- [x] Bundles all node-modules and server-side code into a single js file and deployed directly on Github page.
 
 ## Live
 https://xinyzhang9.github.io/ClashRoyaleDeck/
