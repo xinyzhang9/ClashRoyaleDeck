@@ -1,52 +1,15 @@
 import React from 'react'
-import FilterLink from '../containers/FilterLink'
 
 const Footer = () => (
-  <p style = {{textAlign: 'center', margin: '10px'}}>
-    Filter:
-    {" | "}
-    <FilterLink filter="SHOW_ALL">
-      All
-    </FilterLink>
-
-    {" | "}
-    <FilterLink filter="SHOW_COMMON">
-      <span style = {{color: 'gray'}}>Common</span>
-    </FilterLink>
-    {" | "}
-    <FilterLink filter="SHOW_RARE">
-      <span style = {{color: 'orange'}}>Rare</span>
-    </FilterLink>
-    {" | "}
-    <FilterLink filter="SHOW_EPIC">
-      <span style = {{color: 'purple'}}>Epic</span>
-    </FilterLink>
-    {" | "}
-    <FilterLink filter="SHOW_LEGENDARY">
-      <span style = {{color: 'skyblue'}}>Legendary</span>
-    </FilterLink>
-    {" | "}
-    <FilterLink filter="SHOW_TROOP">
-      <span style = {{color: 'brown'}}>Troop</span>
-    </FilterLink>
-    {" | "}
-    <FilterLink filter="SHOW_SPELL">
-      <span style = {{color: 'hotpink'}}>Spell</span>
-    </FilterLink>
-    {" | "}
-    <FilterLink filter="SHOW_BUILDING">
-      <span style = {{color: 'green'}}>Building</span>
-    </FilterLink>
-    {" | "}
-
-    <FilterLink filter="SHOW_CORE">
-      <span style = {{color: 'red'}}>Core</span>
-    </FilterLink>
-    {" | "}
-    <FilterLink filter="SHOW_COMPLETED">
-      Completed
-    </FilterLink>
-  </p>
+	<div style = {{textAlign: 'center'}}>
+		<hr />
+	 	<h5>
+	  		<span style = {{color: 'green'}}> About Author: </span>
+	  		<a href = 'https://xinyzhang9.github.io/' target = '_blank'>Xinyzhang9(阳哥)</a> | 
+	  		<span style = {{color: 'brown'}}> Github: </span>
+	  		<a href = 'https://github.com/xinyzhang9/ClashRoyaleDeck' target = '_blank'>Source Code</a>
+	 	</h5>
+  	</div>
 )
 
 export default Footer
