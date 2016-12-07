@@ -13,7 +13,7 @@ const Todo = ({ onClick, completed, text, img_src }) => (
                   padding: '1px',
                   textAlign: 'center'
                }}>
-     <img src={'/img/'+img_src+'.png'} style = {{
+     <img src={'/xinyzhang9/ClashRoyaleDeck/blob/master/img/'+img_src+'.png'} style = {{
       width: '120px',
       display: 'block',
       // outlineOffset: '-4px',
