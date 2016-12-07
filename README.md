@@ -18,7 +18,7 @@ React + Redux + Webpack
 ## Live
 https://xinyzhang9.github.io/ClashRoyaleDeck/
 
-## Run locally  
+## Run in production mode  
 ```
 1. Clone or Download this repo  
 2. Switch to this repo in your terminal  
@@ -27,7 +27,15 @@ https://xinyzhang9.github.io/ClashRoyaleDeck/
 5. Open your index.html file in this repo
 
 ```
-
+## Run in dev mode  
+```
+1. Clone or Download this repo  
+2. Switch to this repo in your terminal  
+3. Type the command "npm install"  
+4. Edit index.html, change <script src="bundle.js"></script> to <script src="/static/bundle.js"></script>  
+5. Type the command "npm run start"  
+6. Open your browser at localhost:3000
+```
 ## Screenshot
 ![alt tag](https://raw.githubusercontent.com/xinyzhang9/ClashRoyaleDeck/master/screen.png)
 
