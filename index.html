@@ -4,13 +4,24 @@
   	<meta charset="UTF-8">
     <title>Deck Advisor For Clash Royale</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+  <style type="text/css">
+  #loader{
+      position: fixed;
+      top: 35%;
+      left: 35%;
+      width: 30%;
+      }
+  </style>
   </head>
   <body>
-
+<div><img id = 'loader' src="img/loading.gif"></div>
     <div class="todoapp" id="root">
     </div>
-
+      <script type="text/javascript">
+      window.onload = function(){ 
+      document.getElementById("loader").style.display = "none" ;
+    }  
+      </script>
     <script src="bundle.js"></script>
 
   </body>
