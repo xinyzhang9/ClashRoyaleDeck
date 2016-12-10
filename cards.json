@@ -1356,6 +1356,20 @@
         "dislike":[21,15,31,34,35,56,59],
         "attackRating":6,
         "defendRating":7
+    },
+    "65": {
+        "name":"Clone",
+        "rarity":"epic",
+        "cost":3,
+        "type":"spell",
+        "canHitBuilding":1,
+        "canHitTroop":1,
+        "canHitAir":1,
+        "canHitArea":1,
+        "like":[36,53],
+        "dislike":[39,55,4,7,43,56],
+        "attackRating":7,
+        "defendRating":4
     }
 
 
