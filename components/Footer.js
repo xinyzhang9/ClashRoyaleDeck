@@ -26,7 +26,7 @@ const Footer = () => (
 		<hr />
 	 	<h5>
 	  		<span style = {{color: 'green'}}> Author: </span>
-	  		<a href = 'https://xinyzhang9.github.io/' target = '_blank' style = {{color: 'gray'}}>Xinyzhang9(阳哥)</a> | 
+	  		<a href = 'https://xinyzhang9.github.io/' target = '_blank' style = {{color: 'gray'}}>Xinyzhang9</a> | 
 	  		<span style = {{color: 'brown'}}> Github: </span>
 	  		<a href = 'https://github.com/xinyzhang9/ClashRoyaleDeck' target = '_blank' style = {{color: 'gray'}}>Source Code</a><span> | </span> 
 	  		<FacebookShareButton style = {{display:'inline-block',color:'steelblue'}}url={'https://xinyzhang9.github.io/ClashRoyaleDeck/index.html'} children = {'Share on Facebook'}/>

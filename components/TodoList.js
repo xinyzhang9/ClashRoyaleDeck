@@ -106,7 +106,6 @@ let getDefendRating = (todos) => {
   todos.forEach(function(o){
     sum += o.defendRating * o.cost;
   })
-
   // console.log('def rating',sum);
   let rating = (sum > 250)?'S':(sum > 220)?'A':(sum>200)?'B':(sum>150)?'C':(sum>100)?'D':(sum>75)?'E':'F';
   return rating;
@@ -118,7 +117,8 @@ let getHitBuilding = (todos) => {
   todos.forEach(function(o){
     sum += o.dpc * o.canHitBuilding;
   })
-  let rating = (sum > 600)?'S':(sum > 550)?'A':(sum>80)?'B':(sum>70)?'C':(sum>60)?'D':(sum>50)?'E':'F';
+  // console.log('hit building',sum);
+  let rating = (sum > 550)?'S':(sum > 400)?'A':(sum>300)?'B':(sum>200)?'C':(sum>100)?'D':(sum>50)?'E':'F';
   return rating;
 }
 
@@ -128,7 +128,8 @@ let getHitTroop = (todos) => {
   todos.forEach(function(o){
     sum += o.dpc * o.canHitTroop;
   })
-  let rating = (sum > 600)?'S':(sum > 550)?'A':(sum>80)?'B':(sum>70)?'C':(sum>60)?'D':(sum>50)?'E':'F';
+  // console.log('hit troop',sum);
+  let rating = (sum > 500)?'S':(sum > 400)?'A':(sum>300)?'B':(sum>200)?'C':(sum>100)?'D':(sum>50)?'E':'F';
   return rating;
 }
 
@@ -138,6 +139,7 @@ let getHitAir = (todos) => {
   todos.forEach(function(o){
     sum += o.dpc * o.canHitAir;
   })
+  // console.log('hit air',sum);
   let rating = (sum > 400)?'S':(sum > 350)?'A':(sum>300)?'B':(sum>250)?'C':(sum>200)?'D':(sum>100)?'E':'F';
   return rating;
 }
@@ -148,6 +150,7 @@ let getHitArea = (todos) => {
   todos.forEach(function(o){
     sum += o.dpc * o.canHitArea;
   })
+  // console.log('hit area',sum);
   let rating = (sum > 400)?'S':(sum > 350)?'A':(sum>300)?'B':(sum>250)?'C':(sum>200)?'D':(sum>100)?'E':'F';
   return rating;
 }
@@ -312,33 +315,35 @@ const TodoList = ({ todos, onTodoClick }) => {
     {todos.filter(t => t.completed).length === 8 ? (
     <div id="success">
       <h5>[ Statistics ] </h5>
-      <p><span style = {{color:'hotpink'}}>Average Elixir Cost(圣水速率): </span>{getCost(deck)}</p>
-
-      <p><span style = {{color:'red'}}>Attack rating(进攻评分): </span>{getAttackRating(deck)}</p>
-      <p><span style = {{color:'green'}}>Defend rating(防守评分): </span>{getDefendRating(deck)}</p>
+      <p><span style = {{color:'hotpink'}}>Average Elixir Cost: </span>{getCost(deck)}</p>
 
       <p>
-        <span style = {{color:'gray'}}>Common(普通卡牌): </span>{getCommon(deck)}  
-        <span style = {{color:'orange'}}> Rare(稀有卡牌): </span>{getRare(deck)}  
-        <span style = {{color:'purple'}}> Epic(史诗卡牌): </span>{getEpic(deck)}  
-        <span style = {{color:'skyblue'}}> Legendary(传奇卡牌): </span>{getLegendary(deck)}
-      </p>
-      <p>
-        <span style = {{color:'maroon'}}>Troop(部队数目): </span>{getTroops(deck)}  
-        <span style = {{color:'hotpink'}}> Spell(法术数目): </span>{getSpells(deck)}  
-        <span style = {{color:'green'}}> Building(建筑数目): </span>{getBuildings(deck)}  
+      <span style = {{color:'red'}}>Attack rating: </span>{getAttackRating(deck)}
+      <span style = {{color:'green'}}> Defend rating: </span>{getDefendRating(deck)}
       </p>
 
       <p>
-      <span style = {{color:'steelblue'}}>No.of cores(核心数目): </span>{getCore(deck)}
-      <span style = {{color:'brown'}}> No.of tanks(坦克数目): </span>{getTank(deck)}
+        <span style = {{color:'gray'}}>Common cards: </span>{getCommon(deck)}  
+        <span style = {{color:'orange'}}> Rare cards: </span>{getRare(deck)}  
+        <span style = {{color:'purple'}}> Epic cards: </span>{getEpic(deck)}  
+        <span style = {{color:'skyblue'}}> Legendary cards: </span>{getLegendary(deck)}
+      </p>
+      <p>
+        <span style = {{color:'maroon'}}>Troops: </span>{getTroops(deck)}  
+        <span style = {{color:'hotpink'}}> Spells: </span>{getSpells(deck)}  
+        <span style = {{color:'green'}}> Buildings: </span>{getBuildings(deck)}  
       </p>
 
       <p>
-      <span style = {{color:'blue'}}>Hit Building(夺塔能力): </span>{getHitBuilding(deck)}
-      <span style = {{color:'blue'}}> Hit Troop(削兵能力): </span>{getHitTroop(deck)}
-      <span style = {{color:'blue'}}> Hit Air(防空能力): </span>{getHitAir(deck)}
-      <span style = {{color:'blue'}}> Hit Area(群伤能力): </span>{getHitArea(deck)}
+      <span style = {{color:'steelblue'}}>No.of cores: </span>{getCore(deck)}
+      <span style = {{color:'brown'}}> No.of tanks: </span>{getTank(deck)}
+      </p>
+
+      <p>
+      <span style = {{color:'blue'}}>Hit-tower Capability: </span>{getHitBuilding(deck)}
+      <span style = {{color:'blue'}}> Anti-troop Capability: </span>{getHitTroop(deck)}
+      <span style = {{color:'blue'}}> Anti-Air Capability: </span>{getHitAir(deck)}
+      <span style = {{color:'blue'}}> Area-damage Capability: </span>{getHitArea(deck)}
       </p>
       <hr/>
       <h5 style = {{color: 'hotpink'}}>[ Elixir Suggestions ] </h5>

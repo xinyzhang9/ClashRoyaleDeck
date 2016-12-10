@@ -20,7 +20,7 @@
         "like":[9,48,35],
         "dislike":[60,15,24,31,34,35,59],
         "attackRating":3,
-        "defendRating":5
+        "defendRating":6
     },
     "2": {
         "name":"Archers",
@@ -42,8 +42,8 @@
         "core":0,
         "like":[8,36,46],
         "dislike":[7,49,56],
-        "attackRating":4,
-        "defendRating":5
+        "attackRating":5,
+        "defendRating":6
     },
     "3": {
         "name":"Spear Goblin",
@@ -84,7 +84,7 @@
         "dpc":81,
         "dpcTower":33,
         "attackRating":4,
-        "defendRating":5
+        "defendRating":6
     },
     "5": {
         "name":"Goblins",
@@ -106,7 +106,7 @@
         "core":0,
         "like":[33],
         "dislike":[4,13,16,7,26,15,39,45,47,50,55,58],
-        "attackRating":4,
+        "attackRating":6,
         "defendRating":4
     },
     "6": {
@@ -129,7 +129,7 @@
         "core":0,
         "like":[8,46],
         "dislike":[7,9,17,31,35,57,59],
-        "attackRating":4,
+        "attackRating":5,
         "defendRating":5
     },
     "7": {
@@ -148,7 +148,7 @@
         "like":[],
         "dislike":[],
         "attackRating":6,
-        "defendRating":6
+        "defendRating":7
     },
     "8": {
         "name":"Giant",
@@ -170,7 +170,7 @@
         "core":1,
         "like":[9,56,59],
         "dislike":[12,15,24,31,34,60],
-        "attackRating":7,
+        "attackRating":8,
         "defendRating":3
     },
     "9": {
@@ -193,8 +193,8 @@
         "core":0,
         "like":[8,38],
         "dislike":[7,17,22,15,31,34,49,57],
-        "attackRating":6,
-        "defendRating":6
+        "attackRating":7,
+        "defendRating":7
     },
     "10": {
         "name":"Prince",
@@ -260,7 +260,7 @@
         "core":0,
         "like":[8,36,53],
         "dislike":[21,15,31,34,35,48,49,56,59],
-        "attackRating":6,
+        "attackRating":7,
         "defendRating":7
     },
     "13": {
@@ -283,7 +283,7 @@
         "core":0,
         "like":[33],
         "dislike":[24,31,35,59],
-        "attackRating":4,
+        "attackRating":5,
         "defendRating":6
     },
     "14": {
@@ -306,7 +306,7 @@
         "core":0,
         "like":[8],
         "dislike":[17,22,48,56],
-        "attackRating":4,
+        "attackRating":5,
         "defendRating":5
     },
     "15": {
@@ -329,7 +329,7 @@
         "core":0,
         "like":[54],
         "dislike":[4,13,7,26,39,43,47,56,58],
-        "attackRating":2,
+        "attackRating":4,
         "defendRating":8
     },
     "16": {
@@ -413,7 +413,7 @@
         "core":1,
         "like":[8,16],
         "dislike":[9,24,31,35,45,48,59,60],
-        "attackRating":7,
+        "attackRating":8,
         "defendRating":1
     },
     "20": {
@@ -493,8 +493,8 @@
         "core":0,
         "like":[],
         "dislike":[17,22,54],
-        "attackRating":0,
-        "defendRating":0
+        "attackRating":1,
+        "defendRating":3
     },
     "24": {
         "name":"Inferno Tower",
@@ -563,7 +563,7 @@
         "like":[],
         "dislike":[17,22],
         "attackRating":6,
-        "defendRating":3
+        "defendRating":4
     },
     "28": {
         "name":"Freeze",
@@ -671,7 +671,7 @@
         "core":1,
         "like":[35,55,50,3,5,58],
         "dislike":[12,21,15,24,34,31,49,51,56,64],
-        "attackRating":8,
+        "attackRating":9,
         "defendRating":2
     },
     "34": {
@@ -861,7 +861,7 @@
         "like":[],
         "dislike":[21,22,24,31,35,59],
         "attackRating":7,
-        "defendRating":5
+        "defendRating":6
     },
     "43": {
         "name":"Poison",
@@ -879,7 +879,7 @@
         "like":[],
         "dislike":[],
         "attackRating":6,
-        "defendRating":5
+        "defendRating":6
     },
     "44": {
         "name":"Dark Prince",
@@ -926,7 +926,7 @@
         "core":0,
         "like":[],
         "dislike":[17,12,57],
-        "attackRating":2,
+        "attackRating":4,
         "defendRating":8
     },
     "46": {
@@ -996,7 +996,7 @@
         "like":[8,36,38,54],
         "dislike":[7,17,22,15,49,56],
         "attackRating":9,
-        "defendRating":8
+        "defendRating":9
     },
     "49": {
         "name":"Guards",
@@ -1020,7 +1020,7 @@
         "like":[],
         "dislike":[13,56,58],
         "attackRating":3,
-        "defendRating":6
+        "defendRating":7
     },
     "50": {
         "name":"Fire Spirits",
@@ -1042,7 +1042,7 @@
         "core":0,
         "like":[33,10,57],
         "dislike":[21,39,58],
-        "attackRating":4,
+        "attackRating":5,
         "defendRating":6
     },
     "51": {
@@ -1110,8 +1110,8 @@
         "core":1,
         "like":[16,60,31,35,54,59,17],
         "dislike":[60,24,31,59],
-        "attackRating":8,
-        "defendRating":2
+        "attackRating":9,
+        "defendRating":3
     },
     "54": {
         "name":"Miner",
@@ -1204,7 +1204,7 @@
         "core":0,
         "like":[8],
         "dislike":[21,49,31,35,59],
-        "attackRating":7,
+        "attackRating":8,
         "defendRating":7
     },
     "58": {
@@ -1223,7 +1223,7 @@
         "core":0,
         "like":[],
         "dislike":[],
-        "attackRating":6,
+        "attackRating":5,
         "defendRating":7
     },
     "59": {
@@ -1247,7 +1247,7 @@
         "like":[8,36,46,53],
         "dislike":[17,9,48],
         "attackRating":7,
-        "defendRating":7
+        "defendRating":6
     },
     "60": {
         "name":"Inferno Dragon",
@@ -1292,7 +1292,7 @@
         "core":0,
         "like":[39],
         "dislike":[48],
-        "attackRating":2,
+        "attackRating":3,
         "defendRating":7
     },
     "62": {
@@ -1331,8 +1331,8 @@
         "core":0,
         "like":[8,36,53,54],
         "dislike":[15,43,61],
-        "attackRating":8,
-        "defendRating":6
+        "attackRating":9,
+        "defendRating":5
     },
     "64": {
         "name":"Elite Barbarians",
