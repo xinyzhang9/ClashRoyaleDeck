@@ -1,7 +1,8 @@
 # Clash Royale Deck Advisor
 > This is a single-page application: a deck advisor for Clash Royale players. User can build their own deck from the most updated (include new released) 64 cards. the advisor will show some useful statistics and suggestions on how to improve this deck.  
 
-
+## Todo
+Add new released cards to databases.  
 ## Technology
 React + Redux + Webpack  
 (Python is also used to crawl images of the cards)
